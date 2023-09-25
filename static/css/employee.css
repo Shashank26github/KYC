@@ -1,0 +1,282 @@
+/* Import Font Dancing Script */
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #e8f5ff;
+    font-family: Arial;
+}
+
+/* NavbarTop */
+.navbar-top {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0px 4px 8px 0px grey;
+    height: 70px;
+}
+
+.title {
+    font-family: 'Verdana', cursive;
+    padding-top: 15px;
+    position: absolute;
+    left: 45%;
+}
+.main {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 28px;
+    padding: 0 10px;
+    width: 90%;
+}
+
+.main h2 {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main .card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 50px;
+}
+.main .card table {
+    border: none;
+    font-size: 16px;
+    height: 15px;
+    width: 50%;
+}
+/* Import Font Dancing Script */
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+
+* {
+    margin: 0;
+}
+
+body {
+    background-color: #e8f5ff;
+    font-family: Arial;
+    
+}
+
+/* NavbarTop */
+.navbar-top {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0px 4px 8px 0px grey;
+    height: 70px;
+}
+
+.title {
+    font-family: 'Verdana', cursive;
+    padding-top: 15px;
+    position: absolute;
+    left: 45%;
+}
+.main {
+    margin-top: 2%;
+    margin-left: 2%;
+    font-size: 28px;
+    padding: 0 10px;
+    width: 90%;
+}
+
+.main h2 {
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.main .card {
+    background-color: #fff;
+    border-radius: 18px;
+    box-shadow: 1px 1px 8px 0 grey;
+    height: auto;
+    margin-bottom: 20px;
+    padding: 20px 0 20px 50px;
+}
+.main .card table {
+    border: none;
+    font-size: 16px;
+    height: 150px;
+    width: 50%;
+}
+/*=============== VARIABLES CSS ===============*/
+:root {
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: hsl(228, 81%, 49%);
+  --title-color: hsl(228, 12%, 15%);
+  --text-color: hsl(228, 8%, 50%);
+  --body-color: hsl(228, 100%, 99%);
+  --container-color: #fff;
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: 'Poppins', sans-serif;
+  --normal-font-size: .938rem;
+}
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --normal-font-size: 1rem;
+  }
+}
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  position: relative;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+a {
+  text-decoration: none;
+}
+/*=============== NAV ===============*/
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.section {
+  padding: 2rem 0;
+}
+@media screen and (max-width: 767px) {
+  .nav__logo,
+  .nav__toggle,
+  .nav__name {
+    display: none;
+  }
+  .nav__list {
+    position: fixed;
+    bottom: 2rem;
+    background-color: var(--container-color);
+    box-shadow: 0 8px 24px hsla(228, 81%, 24%, .15);
+    width: 90%;
+    padding: 30px 40px;
+    border-radius: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 36px;
+    transition: .4s;
+  }
+}
+.nav__link {
+  display: flex;
+  color: #0f0f0f;
+  font-weight: 500;
+  transition: .3s;
+}
+.nav__link i {
+  font-size: 1.25rem;
+}
+.nav__link:hover {
+  color: var(--first-color);
+}
+/* Active link */
+.active-link {
+  color: #0f0f0f;
+}
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+@media screen and (max-width: 320px) {
+  .nav__list {
+    column-gap: 20px;
+  }
+}
+/* For medium devices */
+@media screen and (min-width: 576px) {
+  .nav__list {
+    width: 332px;
+  }
+}
+@media screen and (min-width: 767px) {
+  .container {
+    margin-left: 7rem;
+    margin-right: 1.5rem;
+  }
+  .nav {
+    position: fixed;
+    left: 0;
+    background-color: #c7f4fc;
+    box-shadow: 1px 0 4px hsla(228, 81%, 49%, .15);
+    width: 84px;
+    height: 100vh;
+    padding: 2rem;
+    transition: .3s;
+  }
+  .nav__logo {
+    display: flex;
+  }
+  .nav__logo i {
+    font-size: 1.25rem;
+    color: var(--first-color);
+  }
+  .nav__logo-name {
+    color: var(--title-color);
+    font-weight: 600;
+  }
+  .nav__logo, .nav__link {
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .nav__list {
+    display: grid;
+    row-gap: 2.5rem;
+    margin-top: 5.5rem;
+  }
+  .nav__content {
+    overflow: hidden;
+    height: 100%;
+  }
+  .nav__toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: var(--title-color);
+    color: #fff;
+    border-radius: 50%;
+    font-size: 1.20rem;
+    display: grid;
+    place-items: center;
+    top: 2rem;
+    right: -10px;
+    cursor: pointer;
+    transition: .4s;
+  }
+}
+/* Show menu */
+.show-menu {
+  width: 255px;
+}
+/* Rotate toggle icon */
+.rotate-icon {
+  transform: rotate(180deg);
+}
+/* For 2K & 4K resolutions */
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.7;
+  }
+}
+@media screen and (min-width: 3840px) {
+  body {
+    zoom: 2.5;
+  }
+}

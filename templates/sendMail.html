@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Email Marketing</title>
+        <link rel="stylesheet" href="static/css/sendMail.css">
+    </head>
+<body>
+
+<h2 class="title">Send Mail</h2>
+
+{% if status is not none %}
+<p class="status">{{status}}</p>
+{% endif %}
+<form method="POST" action="/sendMail">      
+    <input name="email" type="email" class="feedback-input" placeholder="Email" />   
+    <input name="subject" type="text" class="feedback-input" placeholder="Subject"/>
+    <textarea name="message" class="feedback-input" placeholder="Compose Mail..."></textarea>
+    <input type="submit" value="SUBMIT"/>
+</form>
+
+
+</body>
+</html>
+

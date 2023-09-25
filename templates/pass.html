@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Reset</title>
+    <script>
+        function resetPassword() {
+            var newPassword = document.getElementById("new_password").value;
+            var confirmPassword = document.getElementById("confirm_password").value;
+
+            if (newPassword !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return false;
+            }
+
+            // In a real application, you would send the new password to the server for processing.
+            // For this example, we'll just show an alert.
+            alert("Password reset successful!");
+
+            // You can redirect the user to the login page or another appropriate page after the reset.
+            // window.location.href = "login.html";
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <h2>Password Reset</h2>
+    <form onsubmit="return resetPassword();">
+        <label for="new_password">New Password:</label>
+        <input type="password" id="new_password" required><br>
+
+        <label for="confirm_password">Confirm Password:</label>
+        <input type="password" id="confirm_password" required><br>
+
+        <input type="submit" value="Reset Password">
+    </form>
+</body>
+</html>

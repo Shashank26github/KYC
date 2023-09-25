@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Customer Acquisition Form</title>
+</head>
+<body>
+    <h1>KYC Customer Acquisition Form</h1>
+    {% if status %}
+    <h2 style="color:green;">{{status}}</h2>
+    {% endif %}
+    {% if error %}
+    <h2 style="color:red;">{{error}}</h2>
+    {% endif %}
+    <form action="/kyc_form" method="post">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="full_name">Full Name:</label>
+            <input type="text" id="full_name" name="name" required><br><br>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="national_id">National ID Number:</label>
+            <input type="text" id="national_id" name="ID" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Contact Information</legend>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required><br><br>
+
+            <label for="aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" name="aadhar" required><br><br>
+
+            <label for="panno">PAN Number:</label>
+            <input type="text" id="panno" name="panno" required><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Address</legend>
+            <label for="address">Address:</label>
+            <textarea id="address" name="address" rows="4" required></textarea><br><br>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Information</legend>
+            <label for="income">Annual Income:</label>
+            <input type="number" id="income" name="income" required><br><br>
+
+            <label for="employment">Employment Status:</label>
+            <select id="employment" name="emp_status" required>
+                <option value="employed">Employed</option>
+                <option value="self_employed">Self-Employed</option>
+                <option value="unemployed">Unemployed</option>
+            </select><br><br>
+
+            <label for="account_type">Account Type:</label>
+            <select id="account_type" name="acc_type" required>
+                <option value="savings">Savings</option>
+                <option value="checking">Checking</option>
+            </select><br><br>
+        </fieldset>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

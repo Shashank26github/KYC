@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+
+    <!-- Custom Css -->
+    <link rel="stylesheet" href="static/css/employee.css">
+
+    <!-- FontAwesome 5 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+    </head>
+    <body>
+        <!--=============== NAV ===============-->
+        <div class="nav" id="nav">
+            <nav class="nav__content">
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-chevron-right' ></i>
+                </div>
+                     <div class="user-image">
+                  <div class="profile">
+                <img src="/static/images/prof.jpg"  alt="profile_picture">
+                <h3>{{data[0]}}</h3>
+            </div>
+                     </div>
+
+                <div class="nav__list">
+                    <a href="home" class="nav__link active-link">
+                        <i class='bx bx-home-alt'></i>
+                        <span class="nav__name">Home</span>
+                    </a>
+
+                    <a href="kyc_form" class="nav__link">
+                        <i class='bx bx-file'></i>
+                        <span class="nav__name">KYC_Form</span>
+                    </a>
+
+                    <a href="sendMail" class="nav__link">
+                        <i class='bx bx-envelope' ></i>
+                        <span class="nav__name">Email Marketing</span>
+                    </a>
+                    <a href="employeeList" class="nav__link active-link">
+                        <i class='bx bx-list-ul'></i>
+                        <span class="nav__name">Employees List</span>
+                    </a>
+
+                    <a href="login" class="nav__link">
+                        <i class='bx bx-log-out' ></i>
+                        <span class="nav__name">Logout</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+
+        <!--=============== MAIN ===============-->
+        <main class="container section">
+            <div style="margin:2rem 0"><div id="carbon-block"></div>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2783044520727903"
+     crossorigin="anonymous"></script>
+<!-- CSSScript Demo Page -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-2783044520727903"
+     data-ad-slot="3025259193"></ins>
+                <div class="navbar-top">
+        <div class="title">
+            <h1>Your Profile</h1>
+        </div>
+    </div>
+    <div class="main">
+        <h2>Details</h2>
+        <div class="card">
+            <div class="card-body">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>Username</td>
+                            <td>:</td>
+                            <td>{{data[0]}}</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>:</td>
+                            <td>{{data[1]}}</td>
+                        </tr>
+                        <tr>
+                            <td>Salary</td>
+                            <td>:</td>
+                            <td>{{data[2]}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+        <!--============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+        <script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DC2JW&placement=wwwcssscriptcom";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-LLWL5N9CSM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-LLWL5N9CSM');
+</script>
+        </main>
+    </body>
+<script>
+   /*=============== LINK ACTIVE ===============*/
+const linkColor = document.querySelectorAll('.nav__link')
+function colorLink(){
+  linkColor.forEach(l => l.classList.remove('active-link'))
+  this.classList.add('active-link')
+}
+linkColor.forEach(l => l.addEventListener('click', colorLink))
+/*=============== SHOW HIDDEN MENU ===============*/
+const showMenu = (toggleId, navbarId) =>{
+  const toggle = document.getElementById(toggleId),
+  navbar = document.getElementById(navbarId)
+  if(toggle && navbar){
+      toggle.addEventListener('click', ()=>{
+          /* Show menu */
+          navbar.classList.toggle('show-menu')
+          /* Rotate toggle icon */
+          toggle.classList.toggle('rotate-icon')
+      })
+  }
+}
+showMenu('nav-toggle','nav')
+</script>
+</html>

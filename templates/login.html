@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="static/css/login.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.gstatic.com">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,900;1,700;1,900&amp;display=swap">
+	<script src="https://kit.fontawesome.com/eee15c739f.js" crossorigin="anonymous"></script>
+	<title>Dlithe</title>
+</head>
+<body>
+<main class="main">
+    <div class="container">
+        <div class="forms">
+            <div class="sign__blog">
+                <form method="POST" action="/login" class="signin">
+                    <div class="profile__img__blog">
+                        <img src="https://raw.githubusercontent.com/Uzcoin404/Register-page/9efae3a1f7178386748b478ff47cb3bb118a784e/img/undraw_profile_pic_ic5t.svg" alt="" class="profile">
+                    </div>
+                    <h2 class="title">Sign in</h2>
+
+                    <div class="input__blog">
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="input__blog">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <input type="submit" value="Login" class="btn login">
+                    <p class="errorMsg">{{loginError}}</p>
+
+                    <div class="text-center p-t-12">
+                        <span class="txt1">Forgot</span>
+                        <a class="txt2" href="pass">Username / Password?</a>
+                    </div>
+                </form>
+ 
+                <form method="POST" action="/add" class="register">
+                    <div class="profile__img__blog">
+                        <img src="https://raw.githubusercontent.com/Uzcoin404/Register-page/9efae3a1f7178386748b478ff47cb3bb118a784e/img/undraw_profile_pic_ic5t.svg" alt="" class="profile">
+                    </div>
+                    <h2 class="title">Register</h2>                       
+                    <div class="input__blog">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>               
+                    <div class="input__blog">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" name="email" placeholder="Email" required>
+                    </div>                    
+                    <div class="input__blog">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <input type="text" name="salary" placeholder="Salary" required>
+                    </div>                   
+                    <div class="input__blog">
+                        
+                        <i class="fas fa-lock"></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>                  
+                    <input type="submit" value="Register" class="btn login"> 
+                    <p>{{error}}</p>                 
+                </form>
+            </div>
+
+        </div>
+
+        <div class="panels__blog">
+
+            <div class="panel left__panel">
+
+                <div class="content">
+
+                    <h3 class="panel__title">New here ?</h3>
+                    <p class="panel__text">Create an account</p>
+                    <button class="btn transparent" id="register__btn">Register</button>
+
+                </div>
+
+                <img src="https://raw.githubusercontent.com/Uzcoin404/Register-page/9efae3a1f7178386748b478ff47cb3bb118a784e/img/undraw_Login_re_4vu2.svg" alt="" class="panel__img">
+            </div>
+
+            <div class="panel right__panel">
+
+                <div class="content">
+
+                    <h3 class="panel__title">Already have account</h3>
+                    <p class="panel__text">Just login to the account</p>
+                    <button class="btn transparent" id="signin__btn">Sign in</button>
+
+                </div>
+                <img src="https://raw.githubusercontent.com/Uzcoin404/Register-page/9efae3a1f7178386748b478ff47cb3bb118a784e/img/undraw_authentication_fsn5.svg" alt="" class="panel__img">
+            </div>
+
+        </div>
+
+    </div>
+</main>
+</body>
+<script src="static/JS/login.js"></script>
+</html>
